@@ -16,10 +16,7 @@ steps:
       which tfenv || echo ""
       which terraform || echo ""
 
-      # debug
-      env
-      ls -lR
-      pwd
+      ls -lR ~/.tfenv/bin
 
       terraform version
       tfenv version
