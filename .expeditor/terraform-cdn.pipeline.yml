@@ -13,14 +13,16 @@ steps:
     command: |
       cd terraform/cdn
 
-      which tfenv
-      which terraform
+      which tfenv || echo ""
+      which terraform || echo ""
 
       # debug
       env
       ls -lR
       pwd
+
       terraform version
+      tfenv version
 
       terraform init -migrate-state -force-copy -input=false
       terraform plan -out="$(terraform workspace show).tfplan" -input=false
