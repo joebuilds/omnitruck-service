@@ -16,7 +16,7 @@ steps:
       which tfenv || echo ""
       which terraform || echo ""
 
-      ls -lR ~/.tfenv/bin
+      ls -lR /home/ec2-user/.tfenv/bin
 
       terraform version
       tfenv version
