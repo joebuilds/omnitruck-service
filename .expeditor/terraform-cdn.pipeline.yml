@@ -9,9 +9,12 @@ AWS_ACCESS_KEY_ID:
 steps:
   - label: ':terraform: init & plan'
     agents:
-      queue: docker-windows-2019
+      queue: default
     command: |
       cd terraform/cdn
+
+      which tfenv
+      which terraform
 
       # debug
       env
@@ -26,7 +29,7 @@ steps:
 
   - label: ':terraform: apply'
     agents:
-      queue: docker-windows-2019
+      queue: default
     command: |
       cd terraform/cdn
       # debug
