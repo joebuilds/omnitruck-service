@@ -11,14 +11,14 @@ steps:
     agents:
       queue: default-privileged
     command: |
+      pwd
+
       cd terraform/cdn
+
+      sudo chmod 755 /home/ec2-user
 
       which tfenv || echo ""
       which terraform || echo ""
-
-      sudo ls -lAH /home/ec2-user/.tfenv/bin
-      sudo ls -lAH /home/ec2-user/.tfenv
-      sudo ls -lAH /home/ec2-user
 
       terraform version
       tfenv version
