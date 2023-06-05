@@ -9,7 +9,7 @@ AWS_ACCESS_KEY_ID:
 steps:
   - label: ':terraform: init & plan'
     agents:
-      queue: default-globally-r
+      queue: default-privileged
     command: |
       cd terraform/cdn
 
@@ -17,6 +17,7 @@ steps:
       which terraform || echo ""
 
       sudo ls -lR /home/ec2-user/.tfenv/bin
+      sudo ls -lR /home/ec2-user
 
       terraform version
       tfenv version
@@ -28,7 +29,7 @@ steps:
 
   - label: ':terraform: apply'
     agents:
-      queue: default-globally-r
+      queue: default-privileged
     command: |
       cd terraform/cdn
       # debug
