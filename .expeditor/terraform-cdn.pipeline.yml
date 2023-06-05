@@ -9,7 +9,7 @@ AWS_ACCESS_KEY_ID:
 steps:
   - label: ':terraform: init & plan'
     agents:
-      queue: default
+      queue: default-globally-r
     command: |
       cd terraform/cdn
 
@@ -28,7 +28,7 @@ steps:
 
   - label: ':terraform: apply'
     agents:
-      queue: default
+      queue: default-globally-r
     command: |
       cd terraform/cdn
       # debug

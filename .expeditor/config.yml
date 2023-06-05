@@ -14,6 +14,7 @@ pipelines:
       definition: .expeditor/build.docker.yml
   - terraform/cdn:
       definition: .expeditor/terraform-cdn.pipeline.yml
+      canary: true
 
 github:
   # This deletes the GitHub PR branch after successfully merged into the release branch
