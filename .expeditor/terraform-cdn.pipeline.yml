@@ -20,8 +20,7 @@ steps:
       which tfenv || echo ""
       which terraform || echo ""
 
-      terraform version
-      tfenv version
+      tfenv install
 
       terraform init -migrate-state -force-copy -input=false
       terraform plan -out="$(terraform workspace show).tfplan" -input=false
