@@ -20,7 +20,7 @@ steps:
       which tfenv || echo ""
       which terraform || echo ""
 
-      tfenv install latest-allowed
+      tfenv install 1.3.9
 
       terraform init -migrate-state -force-copy -input=false
       terraform plan -out="$(terraform workspace show).tfplan" -input=false
