@@ -16,8 +16,9 @@ steps:
       which tfenv || echo ""
       which terraform || echo ""
 
-      sudo ls -lR /home/ec2-user/.tfenv/bin
-      sudo ls -lR /home/ec2-user
+      sudo ls -lAH /home/ec2-user/.tfenv/bin
+      sudo ls -lAH /home/ec2-user/.tfenv
+      sudo ls -lAH /home/ec2-user
 
       terraform version
       tfenv version
